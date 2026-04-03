@@ -1,42 +1,88 @@
-# sv
+# Easter World
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+**Pascoa ao Redor do Mundo** — um mapa interativo que mostra como a Pascoa e celebrada em 14 paises, com tradicoes, curiosidades e fotos de cada cultura.
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Sobre o Projeto
 
-```sh
-# create a new project
-npx sv create my-app
-```
+Easter World e uma aplicacao web que convida o usuario a explorar tradicoes pascais pelo mundo. Ao clicar em um pais no mapa ou na barra lateral, um card com detalhes e exibido — incluindo a tradicao local, uma curiosidade e uma foto tematica.
 
-To recreate this project with the same configuration:
+### Paises incluidos
 
-```sh
-# recreate this project
-npx sv@0.13.2 create --template minimal --types ts --no-install easter-world
-```
+Brasil, Suecia, Grecia, Finlandia, Estados Unidos, Franca, Polonia, Australia, Etiopia, Filipinas, Alemanha, Mexico, India e Japao.
 
-## Developing
+---
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Tecnologias
 
-```sh
+| Tecnologia | Uso |
+|---|---|
+| **SvelteKit** | Framework principal (Svelte 5 com runes) |
+| **TypeScript** | Tipagem estatica |
+| **Leaflet** | Mapa interativo |
+| **Pexels** | Fotos tematicas por pais |
+| **Google Fonts** | Playfair Display + DM Sans |
+| **CARTO Tiles** | Camada visual do mapa (light theme) |
+
+---
+
+## Como Rodar
+
+```bash
+# clonar o repositorio
+git clone https://github.com/mbu3no/easter-world.git
+cd easter-world
+
+# instalar dependencias
+npm install
+
+# iniciar o servidor de desenvolvimento
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Acesse `http://localhost:5173` no navegador.
 
-To create a production version of your app:
+### Build de producao
 
-```sh
+```bash
 npm run build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
+---
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Estrutura do Projeto
+
+```
+src/
+  lib/
+    components/
+      Map.svelte          # Mapa interativo com markers e tooltips
+      Sidebar.svelte      # Lista lateral de paises
+      CountryCard.svelte   # Card modal com detalhes e foto
+    data/
+      countries.ts        # Dados dos 14 paises
+  routes/
+    +layout.svelte        # Layout global e CSS
+    +page.svelte          # Pagina principal
+  app.css                 # Variaveis de tema e estilos globais
+  app.html                # HTML base com Google Fonts
+```
+
+---
+
+## Funcionalidades
+
+- Mapa interativo com marcadores animados por pais
+- Sidebar com lista navegavel e destaque do pais selecionado
+- Card modal com foto, tradicao e curiosidade de cada pais
+- Animacao fly-to ao selecionar um pais no mapa
+- Design responsivo (sidebar adapta para mobile)
+- Tema visual com paleta organica (creme, verde-salvia, terracota, ouro)
+
+---
+
+## Licenca
+
+MIT
