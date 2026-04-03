@@ -1,0 +1,55 @@
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  --cream: #faf6f0;
+  --cream-dark: #f0ebe2;
+  --sage: #7a9e7e;
+  --sage-light: #a8c5ab;
+  --sage-deep: #4a6b4e;
+  --terracotta: #c17f59;
+  --terracotta-light: #e0a882;
+  --gold: #c9a84c;
+  --gold-light: #e8d48b;
+  --bark: #5c4a3a;
+  --bark-light: #8b7665;
+  --ink: #2c2420;
+  --ink-soft: #5a4e46;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--sage-light);
+  color: var(--ink);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bark-light);
+  border-radius: 3px;
+}
