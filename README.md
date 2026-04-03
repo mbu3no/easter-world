@@ -1,6 +1,6 @@
 # Easter World
 
-**Páscoa ao Redor do Mundo** — um mapa interativo que mostra como a Páscoa é celebrada em 14 países, com tradições, curiosidades e fotos de cada cultura.
+**Páscoa ao Redor do Mundo** - um mapa interativo que mostra como a Páscoa é celebrada em 14 países, com tradições, curiosidades e fotos de cada cultura.
 
 ---
 
